@@ -1,4 +1,8 @@
 class CredentialsController < ApplicationController
+  def index
+    @credentials = Credential.all
+  end
+
   def create
     Credential.create(credentials_params)
   end
