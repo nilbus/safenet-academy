@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>SafeNet Academy</h1>
+  <img class="logo" src="/logo.png">
+	<%= form_for :credentials do |f| %>
+		<div class="signup-form">
+			<%= f.text_field :name, placeholder: "Name", required: true %>
+			<%= f.email_field :email, placeholder: "Email", required: true %>
+			<%= f.password_field :password, placeholder: "Password", required: true %>
+			<button type="submit">Sign Up</button>
+		</div>
+	<% end %>
+</div>
