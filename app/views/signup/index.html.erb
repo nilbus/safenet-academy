@@ -1,12 +1,37 @@
 <div class="container">
   <h1>SafeNet Academy</h1>
   <img class="logo" src="/logo.png">
-	<%= form_for :credentials do |f| %>
+	<%= form_for :credential, url: credentials_path, remote: true, html: { autocomplete: 'off' } do |f| %>
 		<div class="signup-form">
-			<%= f.text_field :name, placeholder: "Name", required: true %>
-			<%= f.email_field :email, placeholder: "Email", required: true %>
-			<%= f.password_field :password, placeholder: "Password", required: true %>
-			<button type="submit">Sign Up</button>
+			<%= f.text_field :name, placeholder: "Name", required: true, autocomplete: 'off' %>
+			<%= f.text_field :mail, placeholder: "Email", required: true, autocomplete: 'off' %>
+			<%= f.password_field :password, placeholder: "Password", required: true, autocomplete: 'off' %>
+			<button type="submit">Start the Class</button>
 		</div>
 	<% end %>
+
+  <div id="thank-you-modal" class="thank-you-modal">
+    Thank you for registering! Please have a seat.
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.querySelector("form");
+      const modal = document.getElementById("thank-you-modal");
+
+      form.addEventListener("ajax:success", () => {
+        form.reset();
+        modal.style.display = "block";
+        setTimeout(() => {
+          modal.style.opacity = 1;
+          setTimeout(() => {
+            modal.style.opacity = 0;
+            setTimeout(() => {
+              modal.style.display = "none";
+            }, 500);
+          }, 6000);
+        }, 0);
+      });
+    });
+  </script>
 </div>
