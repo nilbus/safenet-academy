@@ -11,10 +11,12 @@ class Credential < ApplicationRecord
   end
 
   def weaknesses
+    return @weaknesses if defined?(@weaknesses)
+
     check = NOBSPW::PasswordChecker.new(**self.slice(%i[password name email]).symbolize_keys)
     reasons = check.reasons.map { |reason| reason.to_s.tr("_", " ") }
     reasons.unshift(pwlist_reason) if pwlist_reason
-    reasons.join(", ").presence || "✨⭐💯"
+    @weaknesses = reasons.join(", ").presence || "✨⭐💯"
   end
 
   def pwlist_reason
