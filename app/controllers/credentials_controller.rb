@@ -1,6 +1,6 @@
 class CredentialsController < ApplicationController
   def index
-    @credentials = Credential.all
+    @credentials = Credential.all.sort_by { |c| -c.weaknesses.length }
   end
 
   def create
