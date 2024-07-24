@@ -5,7 +5,7 @@ Example phishing site for credential harvesting for password analysis.
 
 Intended for use in a cyber security class. Students are asked to register at class start for an interactive activity.
 
-![registration page](https://github.com/user-attachments/assets/91f2e68d-a7da-4a80-a4a0-bd3adc3810e5)
+<img src="https://github.com/user-attachments/assets/249b101c-496d-447e-8857-f60ab62eb252" alt="registration page" width="790" height="738">
 
 Routes
 ------
