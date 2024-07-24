@@ -62,6 +62,7 @@ Rails.application.configure do
   # config.generators.apply_rubocop_autocorrect_after_generate!
   config.hosts = [
     "safenet.ngrok.io",
+    "safenet.academy:3000",
     "localhost:3000"
   ]
 end
