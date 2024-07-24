@@ -1,24 +1,18 @@
-# README
+SafeNet Academy
+===============
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Example phishing site for credential harvesting for password analysis.
 
-Things you may want to cover:
+Routes
+------
 
-* Ruby version
+- `/` - register with a name, email and password. Passwords are collected in paintext.
+- `/credentials` - show password weaknesses and time to crack, revealing the first 2 password characters.
 
-* System dependencies
+Key Lessons
+-----------
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Do not use the same password across multiple sites.
+- Use a password manager to fill, generate and save random, unique passwords for every site.
+- Use a long, memorized passphrase for your email and other important accounts, and use 2-Step Verification.
+- If someone compromises your email account, they can reset passwords to most other sites to gain access.
