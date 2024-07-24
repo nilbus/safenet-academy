@@ -3,6 +3,8 @@ SafeNet Academy
 
 Example phishing site for credential harvesting for password analysis.
 
+Intended for use in a cyber security class. Students are asked to register at class start for an interactive activity.
+
 Routes
 ------
 
