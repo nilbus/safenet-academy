@@ -5,9 +5,9 @@ class Credential < ApplicationRecord
   PWLIST = File.read(Rails.root.join("db/pwlist.txt")).lines.map(&:chomp)
 
   def masked_password
-    return "***" if password.length <= 3
+    return "***" if password.length <= 2
 
-    "#{password[0, 3]}********"
+    "#{password[0, 2]}********"
   end
 
   def weaknesses
