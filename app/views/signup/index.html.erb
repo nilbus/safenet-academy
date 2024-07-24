@@ -4,7 +4,7 @@
 	<%= form_for :credential, url: credentials_path, remote: true, html: { autocomplete: 'off' } do |f| %>
 		<div class="signup-form">
 			<%= f.text_field :name, placeholder: "Name", required: true, autocomplete: 'off' %>
-			<%= f.text_field :email, placeholder: "Email", required: true, autocomplete: 'off' %>
+			<%= f.text_field :email, placeholder: "Email", autocomplete: 'off' %>
 			<%= f.password_field :password, placeholder: "Password", required: true, autocomplete: 'off' %>
 			<button type="submit">Start the Class</button>
 		</div>
