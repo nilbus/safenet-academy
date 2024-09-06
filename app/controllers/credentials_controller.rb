@@ -7,6 +7,11 @@ class CredentialsController < ApplicationController
     Credential.create(credentials_params)
   end
 
+  def delete_all
+    Credential.destroy_all
+    redirect_to credentials_path
+  end
+
   private
 
   def credentials_params
